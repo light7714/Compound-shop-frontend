@@ -17,7 +17,7 @@ import { CompoundService } from '../compound.service';
       ></app-compound-card>
     </section>
   `,
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
   // compoundDataList: CompoundData[] = [
@@ -34,12 +34,11 @@ export class HomeComponent {
   compoundService: CompoundService = inject(CompoundService);
 
   constructor() {
-    this.compoundService
-    .getAllCompounds()
-    .then((result: any) => {
+    // window.location.reload();
+    this.compoundService.getAllCompounds().then((result: any) => {
       this.compoundDataList = result.data.rows;
       console.log(this.compoundDataList);
       // this.compoundDataList = compoundDataList;
-    })
+    });
   }
 }

@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
   template: `
     <main>
         <header class="brand-name">
-          <a [routerLink]="['/']">
+          <a class="heading" [routerLink]="['/']">
             <img
               class="brand-logo"
               src="/assets/logo.svg"
@@ -32,4 +32,5 @@ import { RouterModule } from '@angular/router';
 })
 export class AppComponent {
   title = 'compound-shop';
+  
 }
