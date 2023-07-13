@@ -32,13 +32,13 @@ export class HomeComponent {
   // ];
   compoundDataList: CompoundData[] = [];
   compoundService: CompoundService = inject(CompoundService);
+  // compoundDataCount: number = 0;
 
   constructor() {
-    // window.location.reload();
     this.compoundService.getAllCompounds().then((result: any) => {
       this.compoundDataList = result.data.rows;
+      // this.compoundDataCount = result.data.count;
       console.log(this.compoundDataList);
-      // this.compoundDataList = compoundDataList;
     });
   }
 }
